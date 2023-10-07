@@ -1,4 +1,15 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+	productionBrowserSourceMaps: false,
+	compress: true, 
+	images: {
+		domains: ["files.edgestore.dev"],
+	},
+	swcMinify: true,
 
-module.exports = nextConfig
+	experimental: {
+		swcMinify: true,
+	},
+};
+
+module.exports = nextConfig;
